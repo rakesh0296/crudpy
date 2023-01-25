@@ -1,6 +1,6 @@
 import sqlite3
-
-// FOR CREATING RECORDS FUNCTION DEFINITION
+import router
+// FOR CREATING RECORDS FUNCTION 
 def create():
     try:
         con = sqlite3.connect("data.db")
@@ -23,7 +23,7 @@ def create():
     except:
         print("Error in Record Creation")
 
-# FOR READING ONE RECORD FUNCTION DEFINITION
+# FOR READING ONE RECORD FUNCTION
 def read_one():
     con = sqlite3.connect("data.db")
     cursor = con.cursor()
@@ -39,7 +39,7 @@ def read_one():
         print("Roll Number Does not Exist")
         cursor.close()
 
-# FOR READING ALL RECORDS FUNCTION DEFINITION
+# FOR READING ALL RECORDS FUNCTION
 def read_all():
     con = sqlite3.connect("data.db")
     cursor = con.cursor()
@@ -54,7 +54,7 @@ def read_all():
     else:
         pass
     
-# FOR UPDATING RECORDS FUNCTION DEFINITION
+# FOR UPDATING RECORDS FUNCTION 
 def update():
     con = sqlite3.connect("data.db")
     cursor = con.cursor()
@@ -73,7 +73,7 @@ def update():
     else:
         print("Something Error in Updation")
 
-# FOR DELETING RECORDS FUNCTION DEFINITION
+# FOR DELETING RECORDS FUNCTION
 def delete():
     con = sqlite3.connect("data.db")
     cursor = con.cursor()
