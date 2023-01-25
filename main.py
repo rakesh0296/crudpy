@@ -1,7 +1,6 @@
 from fastapi import fastapi
 from routes import router as record fun 
 
-
 // FOR CREATING RECORDS FUNCTION 
 def create():
     try:
