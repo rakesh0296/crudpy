@@ -1,10 +1,11 @@
-import sqlite3
-import router
-from crud 
+from fastapi import fastapi
+from routes import router as record fun 
+
+
 // FOR CREATING RECORDS FUNCTION 
 def create():
     try:
-        con = sqlite3.connect("data.db")
+        con = fastapi.connect("data.db")
         cursor = con.cursor()
         while (True):
             name = input("Enter Name: ")
@@ -26,7 +27,7 @@ def create():
 
 # FOR READING ONE RECORD FUNCTION
 def read_one():
-    con = sqlite3.connect("data.db")
+    con = fastapi.connect("data.db")
     cursor = con.cursor()
     ids = int(input("Enter Your ID: "))
     query = "SELECT * from USERS WHERE id = ?"
@@ -42,7 +43,7 @@ def read_one():
 
 # FOR READING ALL RECORDS FUNCTION
 def read_all():
-    con = sqlite3.connect("data.db")
+    con = fastapi.connect("data.db")
     cursor = con.cursor()
     query = "SELECT * from USERS"
     result = cursor.execute(query)
@@ -57,7 +58,7 @@ def read_all():
     
 # FOR UPDATING RECORDS FUNCTION 
 def update():
-    con = sqlite3.connect("data.db")
+    con = fastapi.connect("data.db")
     cursor = con.cursor()
     idd = int(input("Enter ID: "))
     name = input("Enter Name: ")
@@ -76,7 +77,7 @@ def update():
 
 # FOR DELETING RECORDS FUNCTION
 def delete():
-    con = sqlite3.connect("data.db")
+    con = fastapi.connect("data.db")
     cursor = con.cursor()
     idd = int(input("Enter ID: "))
     query = "DELETE from USERS where ID = ?"
